@@ -16,16 +16,11 @@ Cart.prototype.addItem = function(product, quantity) {
 };
 
 Cart.prototype.saveToLocalStorage = function() {
-<<<<<<< HEAD
-  // TODO: Fill in this instance method to save the contents of the cart to localStorage
-  
-=======
   // DONE: Fill in this instance method to save the contents of the cart to localStorage
   localStorage.clear();
   let stringData = JSON.stringify(cart);
   localStorage.setItem('cart', stringData);
   console.log(localStorage.cart);
->>>>>>> 7cd971d65395831cc368b2e8ccb462bc5bff4815
 };
 
 Cart.prototype.removeItem = function(item) {
@@ -33,6 +28,7 @@ Cart.prototype.removeItem = function(item) {
   // Note: You will have to decide what kind of parameter to pass in here!
   // this.item.filter(insert function());
   // filter - create a new array filled with elements that pass test provided by function. doesn't change original array.
+  // someDOMelement.innerHTML = ''
 };
 
 const CartItem = function(product, quantity) {
