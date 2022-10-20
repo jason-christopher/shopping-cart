@@ -42,7 +42,7 @@ function addSelectedItemToCart() {
   let itemPicked = document.getElementById('items').value;
   console.log(itemPicked);
   // TODO: get the quantity
-  let quanityPicked = document.getElementById('quantity').value;
+  let quantityPicked = document.getElementById('quantity').value;
   // TODO: using those, add one item to the Cart
 }
 
