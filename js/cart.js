@@ -9,6 +9,7 @@ let cart;
 function loadCart() {
   const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
   cart = new Cart(cartItems);
+  return cart;
 }
 
 // Make magic happen --- re-pull the Cart, clear out the screen and re-draw it
@@ -16,10 +17,17 @@ function renderCart() {
   loadCart();
   clearCart();
   showCart();
+  console.log(loadCart());
 }
 
 // TODO: Remove all of the rows (tr) in the cart table (tbody)
-function clearCart() {}
+function clearCart() {
+//   // document.getElementById("cart").deleteRow(0);
+  let tbody = document.querySelector('tbody');
+tbody.textContent = '';
+
+
+}
 
 // TODO: Fill in the <tr>'s under the <tbody> for each item in the cart
 function showCart() {
