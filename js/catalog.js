@@ -41,12 +41,19 @@ function handleSubmit(event) {
 function addSelectedItemToCart() {
   // DONE: suss out the item picked from the select list
   let itemPicked = document.getElementById('items').value;
+<<<<<<< HEAD
+  console.log(itemPicked);
+  // TODO: get the quantity
+  let quantityPicked = document.getElementById('quantity').value;
+  // TODO: using those, add one item to the Cart
+=======
   // console.log(itemPicked);
   // DONE: get the quantity
   let quantityPicked = document.getElementById('quantity').value;
   // console.log(quantityPicked);
   // DONE: using those, add one item to the Cart
   cart.addItem(itemPicked, quantityPicked);
+>>>>>>> 7cd971d65395831cc368b2e8ccb462bc5bff4815
 }
 
 // DONE: Update the cart count in the header nav with the number of items in the Cart
