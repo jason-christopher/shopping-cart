@@ -49,7 +49,11 @@ function addSelectedItemToCart() {
 // DONE: Update the cart count in the header nav with the number of items in the Cart
 function updateCounter() {
   let itemCount = document.getElementById('itemCount');
-  itemCount.textContent = `(${cart.items.length} items)`;
+  if(cart.items.length === 1){
+    itemCount.textContent = ` (${cart.items.length} item)`;
+  } else {
+  itemCount.textContent = ` (${cart.items.length} items)`;
+  }
 }
 
 // DONE: As you add items into the cart, show them (item & quantity) in the cart preview div
@@ -59,7 +63,11 @@ function updateCartPreview() {
   for(let i = 0; i < cart.items.length; i++) {
     let product = cart.items[i].product;
     let quantity = cart.items[i].quantity;
-    p.textContent = `${product} ${quantity}`;
+    if(quantity > 1 && product.slice(-1) !== 's'){
+      p.textContent = `${quantity} ${product}s`;
+    } else {
+      p.textContent = `${quantity} ${product}`;
+    }
     cartContents.appendChild(p);
   }
   // DONE: Get the item and quantity from the form
@@ -75,3 +83,8 @@ catalogForm.addEventListener('submit', handleSubmit);
 // Before anything else of value can happen, we need to fill in the select
 // drop down list in the form.
 populateForm();
+
+let cartContents = document.getElementById('cartContents');
+let h3 = document.createElement('h3');
+h3.textContent = 'Cart Preview';
+cartContents.appendChild(h3);

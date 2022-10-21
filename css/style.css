@@ -1,1 +1,163 @@
-/* TODO: Make it awesome */
+*{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+  width: 1000px;
+  margin: 0 auto;
+}
+
+header h1{
+  font-size: 60px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-align: center;
+  padding: 10px 0;
+  background-image: linear-gradient(to right, blue, cyan, blue);
+  color: black
+}
+nav{
+  background-image: linear-gradient(to right, gold, white, gold);
+  border: 2px solid black;
+  border-radius: 5px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+ul{
+  display: flex;
+  justify-content: space-around;
+}
+
+li{
+  font-size: 30px;
+  padding: 10px;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+a:hover{
+  color: red;
+}
+
+#itemCount{
+  color: red;
+}
+
+main{
+  width: 800px;
+  margin: 0 auto;
+  background-image: linear-gradient(cyan, gold, cyan);
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+main header h1{
+  width: 800px;
+  font-size: 40px;
+  text-align: center;
+  padding: 10px;
+  background-image: none;
+}
+
+ol{
+  width: 700px;
+  margin: 10px auto;
+}
+
+ol li{
+  list-style-type: decimal;
+  font-size: 20px;
+  margin-left: 50px;
+}
+
+form{
+  width: 600px;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 10px auto;
+  font-size: 20px;
+  text-align: center;
+  padding-bottom: 10px;
+  background-image: linear-gradient(to right, grey, white, grey);
+  box-shadow: 2px 2px 5px;
+}
+
+form legend, h3{
+  text-decoration: underline;
+  font-size: 30px;
+  padding: 10px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#cartContents{
+  width: 600px;
+  border: 1px solid black;
+  border-radius: 10px;
+  text-align: center;
+  margin: 0 auto;
+  background-image: linear-gradient(to right, grey, white, grey);
+  box-shadow: 2px 2px 5px;
+}
+
+#cartContents h3{
+  padding: 5px;
+  font-size: 30px;
+  text-decoration: underline;
+  padding: 10px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#cartContents p{
+  padding: 5px;
+  font-size: 20px;
+}
+
+footer{
+  width: 1000px;
+  font-size: 20px;
+  text-align: center;
+  margin: 0 auto;
+  background-image: linear-gradient(to right, blue, cyan, blue);
+  padding: 20px 0;
+  border: 2px solid black;
+  border-radius: 5px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+table{
+  border: 1px solid black;
+  width: 600px;
+  margin: 10px auto;
+}
+
+td, th{
+  border: 1px solid black;
+  width: 200px;
+  text-align: center;
+  font-size: 20px;
+}
+
+td:nth-child(1){
+  color: black;
+  cursor: pointer;
+  background-color: red;
+  border: 1px solid black;
+  border-radius: 3px;
+  transition: 0.1s;
+}
+
+td:nth-child(1):hover{
+  color: white;
+}
+
+td:nth-child(1):active{
+  color: black;
+}
+
+th{
+  font-weight: bold;
+}
