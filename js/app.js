@@ -16,7 +16,6 @@ Cart.prototype.saveToLocalStorage = function() {
   localStorage.clear();
   let stringData = JSON.stringify(cart.items);
   localStorage.setItem('cart', stringData);
-  console.log(localStorage.cart);
 };
 
 Cart.prototype.removeItem = function(item) {
@@ -24,7 +23,7 @@ Cart.prototype.removeItem = function(item) {
   cart.items.splice(item, 1);
 
   // pass in index value (splice)
-  // TODO: Fill in this instance method to remove one item from the cart.
+  // DONE: Fill in this instance method to remove one item from the cart.
   // Note: You will have to decide what kind of parameter to pass in here!
   // this.item.filter(insert function());
   // filter - create a new array filled with elements that pass test provided by function. doesn't change original array.
@@ -68,5 +67,3 @@ function generateCatalog() {
 
 // Initialize the app by creating the big list of products with images and names
 generateCatalog();
-
-console.log(Product.allProducts);
