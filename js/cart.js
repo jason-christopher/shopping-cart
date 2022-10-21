@@ -9,7 +9,6 @@ let cart;
 function loadCart() {
   const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
   cart = new Cart(cartItems);
-  console.log(cart);
 }
 
 // Make magic happen --- re-pull the Cart, clear out the screen and re-draw it
@@ -17,21 +16,19 @@ function renderCart() {
   loadCart();
   clearCart();
   showCart();
-  console.log(loadCart());
 }
 
-// TODO: Remove all of the rows (tr) in the cart table (tbody)
+// DONE: Remove all of the rows (tr) in the cart table (tbody)
 function clearCart() {
   let tbody = document.querySelector('tbody');
   tbody.textContent = '';
 }
 
-// TODO: Fill in the <tr>'s under the <tbody> for each item in the cart
+// DONE: Fill in the <tr>'s under the <tbody> for each item in the cart
 function showCart() {
 
   // DONE: Find the table body
   let tbody = document.querySelector('tbody');
-  // console.log(cart.items.items[0]);
   for (let i = 0; i < cart.items.length; i++){
     let row = document.createElement('tr');
     tbody.appendChild(row);
@@ -63,7 +60,7 @@ cart.removeItem(id);
   cart.saveToLocalStorage();
   renderCart();
 
-  // Done: When a delete link is clicked, use cart.removeItem to remove the correct item
+  // DONE: When a delete link is clicked, use cart.removeItem to remove the correct item
   // Done: Save the cart back to local storage
   // Done: Re-draw the cart table
 
